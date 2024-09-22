@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveCanvas: Love Emoticon Image Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="editor-container">
+        <h1>LoveCanvas: Love Emoticon Image Editor</h1>
+        
+        <!-- Emoticon Selection Grid -->
+        <div class="emoticon-grid">
+            <button class="emoticon" onclick="selectEmoticon('❤️')">❤️</button>
+            <button class="emoticon" onclick="selectEmoticon('💖')">💖</button>
+            <button class="emoticon" onclick="selectEmoticon('😍')">😍</button>
+            <button class="emoticon" onclick="selectEmoticon('💘')">💘</button>
+            <button class="emoticon" onclick="selectEmoticon('💕')">💕</button>
+            <!-- Add more emoticons up to 20 -->
+        </div>
+
+        <!-- Image Upload Section -->
+        <input type="file" id="imageLoader" name="imageLoader" onchange="uploadImage(event)">
+        
+        <!-- Text input and formatting -->
+        <textarea id="userText" placeholder="Enter your love note..."></textarea>
+        
+        <!-- Font and Color Selection -->
+        <select id="fontSelect">
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <!-- Add more fonts as needed -->
+        </select>
+        
+        <input type="color" id="textColor" value="#ff0000">
+        
+        <!-- Canvas to display image and text -->
+        <div class="canvas-container">
+            <canvas id="imageCanvas"></canvas>
+        </div>
+        
+        <!-- Save Button -->
+        <button id="saveBtn" onclick="saveImage()">Save Image</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
